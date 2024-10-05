@@ -6,6 +6,26 @@
     <title>PHP DEMO</title>
 </head>
 <body>
+    
+    <?php
+
+    if (isset($_GET["error"])){
+    ?>
+        <p style="background-color: red; color:aliceblue"><?php echo $_GET["error"]?></p>   
+    <?php
+    }
+    ?>
+        
+
+    <?php
+
+    if (isset($_GET["success"])){
+    ?>
+    <p style="background-color: green; color:aliceblue"><?php echo $_GET["success"]?></p>   
+    <?php
+    }//echo $_GET["error"];
+    ?>
+
     <form action="output.php" method="POST">
         <div>
         <label for = "username">Username</label>

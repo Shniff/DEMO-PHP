@@ -12,7 +12,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
     //Validate
-    /*
+    
     if (trim($username) != ""){
     echo "User username is not empty<br>";
     } else {
@@ -36,14 +36,26 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     } else {
     echo "Field password is empty <br>";
     }
-    */
+    
+    if($password == $confirm_password){
+
+        header("location: demo1.php?success=REGISTRATION SUCCESSFUL");
+        exit;
+
+    } else {
+        header("location: demo1.php?error=PASSWORD MISMATCH");
+        exit;
+
+    }
+
+}
 
 
 
    
 //echo "User email is ". $email. "<br>";
 // echo "User username is ". $username. "<br>";
- test($username);
+ /*test($username);
  test($email);
  test($password);
  test($confirm_password);
@@ -56,5 +68,5 @@ function test($fieldName){
         echo "Field $fieldName is EMPTY<br>";
         }
 
-    }
+    }*/
 ?>
